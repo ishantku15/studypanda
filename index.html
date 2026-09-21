@@ -71,7 +71,7 @@
         }
 
         .container { 
-            max-width: 1100px; 
+            max-width: 1200px; 
             margin: 0 auto; 
             padding: 100px 20px 60px; 
             text-align: center; 
@@ -81,8 +81,8 @@
 
         /* Hero Section (Panda Animation) */
         .hero-emoji { 
-            width: 90px; 
-            height: 90px; 
+            width: 100px; 
+            height: 100px; 
             margin-bottom: 20px; 
             filter: drop-shadow(0 0 20px rgba(140, 120, 255, 0.35));
             animation: floatEmoji 3s ease-in-out infinite;
@@ -94,7 +94,7 @@
 
         h1 { 
             font-family: Georgia, serif; 
-            font-size: clamp(2.2rem, 6vw, 3.6rem); 
+            font-size: clamp(2.5rem, 6vw, 4rem); 
             margin-bottom: 4px; 
             line-height: 1.15;
         }
@@ -106,11 +106,11 @@
         .subtitle { 
             font-family: Georgia, serif;
             color: #d4d4d4; 
-            font-size: clamp(0.95rem, 2.2vw, 1.15rem); 
+            font-size: clamp(1rem, 2.2vw, 1.3rem); 
             font-weight: 600;
             letter-spacing: 0.04em;
             margin-top: 18px; 
-            margin-bottom: 52px;
+            margin-bottom: 60px;
             position: relative;
             display: inline-block;
         }
@@ -132,28 +132,28 @@
             border-radius: 50%;
         }
         
-        /* App Grid (Adjusted for 4 items) */
+        /* App Grid (Larger, Spacious layout for 4 items) */
         .app-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
-            gap: 18px; 
-            max-width: 1000px; 
+            gap: 28px; 
+            max-width: 1150px; 
             margin: 0 auto; 
         }
         
-        /* App Card */
+        /* App Card (Increased Padding) */
         .app-card { 
             background: rgba(255,255,255,0.04); 
             border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: 18px; 
-            padding: 22px 12px 18px; 
+            border-radius: 24px; 
+            padding: 35px 20px 28px; 
             text-decoration: none; 
             color: #fff; 
             transition: all 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
             display: flex; 
             flex-direction: column; 
             align-items: center; 
-            gap: 14px; 
+            gap: 18px; 
             position: relative;
             overflow: hidden;
         }
@@ -161,7 +161,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 18px;
+            border-radius: 24px;
             background: radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.08) 0%, transparent 65%);
             opacity: 0;
             transition: opacity 0.3s;
@@ -169,30 +169,33 @@
         }
         .app-card:hover { 
             border-color: rgba(0, 255, 136, 0.35); 
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 230, 118, 0.25); 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 230, 118, 0.3); 
             background: rgba(255,255,255,0.07); 
         }
         .app-card:hover::before { opacity: 1; }
-        .app-card:active { transform: translateY(-2px) scale(0.98); }
+        .app-card:active { transform: translateY(-4px) scale(0.98); }
         
+        /* App Icon (Significantly Larger) */
         .app-icon { 
-            width: 62px; 
-            height: 62px; 
-            border-radius: 14px; 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 22px; 
             object-fit: cover; 
-            border: 1.5px solid rgba(0, 230, 118, 0.35); 
-            box-shadow: 0 0 16px rgba(0, 230, 118, 0.12);
-            transition: box-shadow 0.28s, border-color 0.28s;
+            border: 2px solid rgba(0, 230, 118, 0.35); 
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.15);
+            transition: box-shadow 0.28s, border-color 0.28s, transform 0.28s;
             background: #111;
         }
         .app-card:hover .app-icon {
-            box-shadow: 0 0 24px rgba(0, 230, 118, 0.3);
-            border-color: rgba(0, 230, 118, 0.6);
+            box-shadow: 0 0 30px rgba(0, 230, 118, 0.4);
+            border-color: rgba(0, 230, 118, 0.7);
+            transform: scale(1.05);
         }
         
+        /* App Name (Larger Text) */
         .app-name { 
-            font-size: 0.8rem; 
+            font-size: 1rem; 
             font-weight: 600; 
             text-align: center; 
             white-space: nowrap;
@@ -204,36 +207,37 @@
         
         /* Footer */
         footer { 
-            margin-top: 60px; 
-            padding-top: 20px; 
+            margin-top: 80px; 
+            padding-top: 25px; 
             border-top: 1px solid rgba(255,255,255,0.1); 
-            font-size: 0.8rem; 
+            font-size: 0.9rem; 
             color: #888; 
         }
         footer a { 
             color: #00e676; 
             text-decoration: none; 
-            margin: 0 10px; 
+            margin: 0 12px; 
             transition: color 0.2s;
         }
         footer a:hover { color: #00c853; text-shadow: 0 0 8px rgba(0,230,118,0.4); }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .app-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 600px; }
+        /* Responsive Breakpoints */
+        @media (max-width: 1000px) {
+            .app-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 700px; }
+            .app-icon { width: 90px; height: 90px; }
         }
         @media (max-width: 600px) {
             .container { padding: 80px 16px 40px; }
-            .hero-emoji { width: 70px; height: 70px; }
-            .app-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 100%; }
-            .app-icon { width: 52px; height: 52px; }
-            .app-card { padding: 18px 10px 14px; }
-            .app-name { font-size: 0.72rem; }
+            .hero-emoji { width: 80px; height: 80px; }
+            .app-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 100%; }
+            .app-icon { width: 75px; height: 75px; border-radius: 18px; }
+            .app-card { padding: 25px 12px 20px; border-radius: 18px; gap: 14px; }
+            .app-name { font-size: 0.85rem; }
+            footer a { display: block; margin: 8px 0; }
         }
-        @media (max-width: 380px) {
-            .app-grid { gap: 10px; }
-            .app-icon { width: 46px; height: 46px; }
-            .app-name { font-size: 0.68rem; }
+        @media (max-width: 400px) {
+            .app-grid { grid-template-columns: 1fr; gap: 15px; max-width: 280px; }
+            .app-icon { width: 85px; height: 85px; }
         }
     </style>
 </head>
@@ -262,7 +266,7 @@
 
     <!-- App Data & Rendering Logic -->
     <script>
-        // Updated data: 4 apps with the URLs you provided
+        // Updated data: 4 apps with your URLs
         const APPS_DATA = [
             { 
                 name: "Physics Wallah", 
